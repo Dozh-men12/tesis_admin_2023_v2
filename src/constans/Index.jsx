@@ -7,7 +7,7 @@ export const navbarData = [
     {   
         icono:<RxDashboard size={20}/>,
         texto:"Dashboard",
-        URL:"/inicio-admin/dashboard"
+        URL:"/dashboard"
     },
     {
         icono:<GrHistory size={20}/>,
