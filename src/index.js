@@ -7,3 +7,5 @@ export * from './constans/Index';
 export * from './index';
 export * from './main';
 export { default as Inicio } from './pages/Inicio';
+export { default as Dashboard } from './pages/dashboard/Dashboard';
+export { default as Historial } from './pages/historial/Historial';

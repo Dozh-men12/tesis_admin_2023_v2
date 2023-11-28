@@ -4,9 +4,9 @@ import Header from '../components/header/Header'
 
 function Inicio() {
   return (
-    <section className='h-screen flex   bg-slate-100'>
+    <section className='h-screen flex   bg-slate-700'>
         <Navbar/>
-        <Header/>
+        <Header/>       
     </section>
   )
 }
