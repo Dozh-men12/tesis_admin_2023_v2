@@ -1,14 +1,24 @@
+import { useState } from "react";
+
 
 const Buttons = ({ icono, texto }) =>{
+
+    const [color , setColor] = useState(true);
+
+    const handleColor= () =>{
+        setColor(!color);
+    }
+
   return (
-      <>                 
-          <button className='button-navbar dark:bg-slate-800 dark:hover:bg-[#35aafd91] dark:text-white '>
-                  <div className='flex justify-center items-center px-[20px] gap-3'>
-                      {icono}
-                      <span className="dark:hover:text-white">{texto}</span>                        
-                  </div>          
-          </button>       
-      </>
+    <>                 
+        <button className={color ? 'button-navbar' : 'button-navbar-clicked'} onClick={handleColor}>
+                <div className='flex justify-center items-center mx-5 gap-3'>
+                    {icono}
+                    <span className="dark:hover:text-white">{texto}</span>                        
+                </div>  
+                          
+        </button>       
+    </>
   );
 
 

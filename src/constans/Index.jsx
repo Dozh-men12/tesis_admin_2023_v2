@@ -12,12 +12,12 @@ export const navbarData = [
     {
         icono:<GrHistory size={20}/>,
         texto:"Historial",
-        URL:"/inicio-admin/historial"
+        URL:"/historial"
     },
     { 
         icono:<FaUsers size={20}/>,
         texto:"Usuarios",
-        URL:"/inicio-admin/usuarios"
+        URL:"/usuarios"
     },
 ]
 

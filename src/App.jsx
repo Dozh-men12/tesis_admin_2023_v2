@@ -1,22 +1,26 @@
 import Login from "./acces/Login"
 import Inicio from "./pages/Inicio"
-import {  BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {  BrowserRouter as BrowserRouter, Router, Routes, Route , Outlet} from "react-router-dom";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Navbar from "./components/navbar/Navbar";
+import Header from "./components/header/Header";
+import Historial from "./pages/historial/Historial";
 
-function App() {  
+function App() {   
 
   return (
-    <>
-    <Routes>
-      {/* <Route path='/' index element={<Login/>}/> */}
-      <Route path='/' element={<Inicio/>}/>
-      <Route path='/dashboard' element={<Dashboard/>}/>
-      {/* <Route path='/inicio-admin/dashboard' element={<Dashboard/>}></Route>
-      <Route path='/inicio-admin/historial' element={<Historial/>}></Route>
-      <Route path='/inicio-admin/usuarios' element={<Users/>}></Route> */}
-    </Routes>
+    
+    <BrowserRouter>
+      <Routes>       
+          <Route path='/'  element={<Inicio/>}>
+            <Route path='/dashboard' element={<Dashboard/>}/>  
+            <Route path='/historial' element={<Historial/>}/>      
+          </Route>        
+      </Routes>
+    </BrowserRouter>
+    
       
-    </>
+    
   )
 }
 
