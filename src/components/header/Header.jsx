@@ -33,14 +33,14 @@ const Header = () =>{
     } */
     
     return(
-        <section className=" flex flex-row w-screen min-w-[10%] h-screen max-h-16 bg-white mx-4 ml-[275px]  justify-between rounded-md">
+        <section className=" flex flex-row  h-screen max-h-16 bg-white justify-between rounded-md">
             <div className="hover:bg-slate-300 focus-visible:bg-slate-300 max-h-9 h-screen my-auto w-screen max-w-sm flex rounded-full mx-[20px] dark:bg-slate-800  dark:text-white">
                 <div className=" flex items-center justify-center ml-[20px] mr-[4px]">
                     <GoSearch size={22}/>
                     <input type="text"  className="shadow-none mx-[10px]  bg-none border-none bg-transparent focus:outline-none focus:ring-0" placeholder="Buscar" />
                 </div>                
             </div>
-            <div className= "flex my-auto  mx-[20px] gap-6 text-black lg:w-auto lg:flex-row lg:pr-2 cursor-pointer">
+            <div className= "flex my-auto  mx-5 gap-6 text-black lg:w-auto lg:flex-row lg:pr-2 cursor-pointer">
                 <div className="my-auto">
                 <MdOutlineWbSunny className="dark:text-slate-100" size={25}/>
                 </div>                

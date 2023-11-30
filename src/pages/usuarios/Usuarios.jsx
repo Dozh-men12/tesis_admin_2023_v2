@@ -2,7 +2,9 @@ import React from 'react'
 
 function Usuarios() {
   return (
-    <div>Usuarios</div>
+    <div className='bg-red-600 h-screen '>
+      Usuarios
+    </div>
   )
 }
 

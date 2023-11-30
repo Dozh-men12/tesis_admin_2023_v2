@@ -2,7 +2,9 @@ import React from 'react'
 
 function Historial() {
   return (
-    <div className='flex flex-col  bg-red-500 h-screen ml-[260px] mr-[20px]' >Historial</div>
+    <div className=' bg-red-600 h-screen ' >
+      Aquí se colocan todos las reservas realizadas por los estudiantes
+    </div>
   )
 }
 

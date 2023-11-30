@@ -5,6 +5,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
 import Historial from "./pages/historial/Historial";
+import Usuarios from "./pages/usuarios/Usuarios";
 
 function App() {   
 
@@ -14,7 +15,8 @@ function App() {
       <Routes>       
           <Route path='/'  element={<Inicio/>}>
             <Route path='/dashboard' element={<Dashboard/>}/>  
-            <Route path='/historial' element={<Historial/>}/>      
+            <Route path='/historial' element={<Historial/>}/>   
+            <Route path='/usuarios' element={<Usuarios/>}/>    
           </Route>        
       </Routes>
     </BrowserRouter>

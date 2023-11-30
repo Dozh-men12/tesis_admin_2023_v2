@@ -2,9 +2,8 @@ import React from 'react'
 
 function Dashboard() {
   return (
-    <div className='flex flex-col  bg-red-500 h-screen ml-[260px] mr-[20px]'>
-      {console.log("Dashboard")}
-      sdsd
+    <div className=' bg-red-600 h-screen   '>
+      Aquí se colocan los dashboards
     </div>
   )
 }
