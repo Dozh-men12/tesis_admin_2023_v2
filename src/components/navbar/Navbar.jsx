@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <section className="sm:h-screen max-w-[25%]   dark:bg-slate-700 flex flex-col absolute bg-white">
-            <div className='mx-3 my-5'>
+    <section className="sm:h-screen max-w-[25%]   dark:bg-slate-700 flex flex-col absolute bg-[#35aafd91]">
+            <div className='mx-3 my-12 pb-12 border-b-2'>
                 <img src={logo_tecsup} alt="logo tecsup" className='h-[50px] dark:bg-slate-700' />
             </div>
-            <div className='flex flex-col gap-4 mt-12'>
+            <div className='flex flex-col gap-4 mt-4  '>
                 {navbarData.map((buttons ,index) => (
                     <Link key={index} to={buttons.URL}>
                         <Buttons key={index} {...buttons}/>

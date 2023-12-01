@@ -15,11 +15,11 @@
 
 @layer utilities {
   .button-navbar{
-    @apply min-w-[220px]  min-h-[44px] mx-auto flex flex-row  active:bg-[#BDBDBD] hover:bg-[#DCDCDC] dark:bg-slate-800 dark:hover:bg-[#35aafd91] dark:text-white rounded-lg items-center;
+    @apply min-w-[210px]  min-h-[44px] mx-auto flex flex-row  active:bg-[#BDBDBD] hover:bg-[#DCDCDC] dark:bg-slate-800 dark:hover:bg-[#35aafd91] dark:text-white rounded-lg items-center;
   }
 
   .button-navbar-clicked{
-    @apply min-w-[220px]  min-h-[44px] mx-auto flex flex-row   dark:bg-slate-800 bg-[#35aafd91] dark:text-white rounded-lg items-center;
+    @apply min-w-[210px]  min-h-[44px] mx-auto flex flex-row text-white  dark:bg-slate-800 bg-slate-700 dark:text-white rounded-lg items-center;
   }
   .padding {
     @apply sm:px-16 px-8 sm:py-24 py-12;
