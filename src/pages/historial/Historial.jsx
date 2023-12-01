@@ -2,7 +2,7 @@ import React from 'react'
 
 function Historial() {
   return (
-    <div className=' bg-red-600 h-screen ' >
+    <div className=' ' >
       Aquí se colocan todos las reservas realizadas por los estudiantes
     </div>
   )

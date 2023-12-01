@@ -7,20 +7,14 @@ import Dashboard from './dashboard/Dashboard'
 
 function Inicio() {
   return (  
-    <div className='bg-slate-100 h-screen flex flex-row gap-[260px] '>      
-      <div>
-        <Navbar/> 
-      </div>  
-    <div className='flex flex-col mx-4 w-screen gap-2 '>
-    <Header/>
-    <Outlet/>
-
-
-    </div>
-    
-    
-    
-
+    <div className='bg-slate-100 h-screen flex flex-row gap-[240px] '>      
+        <div>
+          <Navbar/> 
+        </div>  
+        <div className='flex flex-col mx-4 w-screen gap-2 '>
+          <Header/>
+          <Outlet/>
+        </div>    
     </div>
     
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Dashboard() {
   return (
-    <div className=' bg-red-600 h-screen   '>
+    <div className=' grid  bg-transparent h-screen   '>
       Aquí se colocan los dashboards
     </div>
   )
