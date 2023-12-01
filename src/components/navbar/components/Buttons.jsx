@@ -12,7 +12,7 @@ const Buttons = ({ icono, texto }) =>{
   return (
     <>                 
         <button className={color ? 'button-navbar' : 'button-navbar-clicked'} onClick={handleColor}>
-                <div className='flex justify-center items-center mx-5 gap-3'>
+                <div className='flex justify-center items-center mx-5 gap-3 '>
                     {icono}
                     <span className="dark:hover:text-white">{texto}</span>                        
                 </div>  

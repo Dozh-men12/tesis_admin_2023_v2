@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <section className="sm:h-screen max-w-[25%]  dark:bg-slate-700 flex flex-col absolute bg-white">
+    <section className="sm:h-screen max-w-[25%]   dark:bg-slate-700 flex flex-col absolute bg-white">
             <div className='mx-3 my-5'>
                 <img src={logo_tecsup} alt="logo tecsup" className='h-[50px] dark:bg-slate-700' />
             </div>
