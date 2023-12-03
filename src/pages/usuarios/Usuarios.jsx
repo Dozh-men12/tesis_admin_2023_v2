@@ -19,16 +19,7 @@ function Usuarios() {
 
       </div>
       
-      {/* <div className=' flex flex-col items-center justify-center container h-screen max-h-[750px] bg-white mx-auto'>
-        <div className='w-full py-5 lg:flex lg:flex-wrap lg:gap-4 bg-slate-600 '>
-          <div className='flex w-full flex-col items-center gap-4 md:flex-row md:justify-around xl:justify-between'>
-            Opciones de tabla
-          </div>  
-        </div>
-        <div>
-        Acá va la tabla del historial de reservas
-        </div>
-      </div> */}
+      
      
     </main>
   )
