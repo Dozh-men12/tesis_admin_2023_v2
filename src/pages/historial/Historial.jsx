@@ -1,4 +1,5 @@
 import React from 'react'
+import HistorialTable from './components/HistorialTable'
 
 function Historial() {
   return (
@@ -13,7 +14,7 @@ function Historial() {
           </div>
         </div>
         <div className='bg-white  my-5 grid w-full auto-rows-auto grid-cols-1 justify-center gap-4 '>
-          TABLA
+          <HistorialTable></HistorialTable>
 
         </div>
 
