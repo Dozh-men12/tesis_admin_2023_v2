@@ -1,5 +1,5 @@
 import React from 'react'
-import HistorialTable from './components/HistorialTable'
+import HistorialTable from "./components/HistorialTable"
 
 function Historial() {
   return (
@@ -10,10 +10,10 @@ function Historial() {
       <div className='container mx-auto'>
         <div className='bg-slate-500 w-full py-5 lg:flex lg:flex-wrap lg:gap-4'>
           <div>
-            Deporte
+            Acá van los ditintos botones para la tabla
           </div>
         </div>
-        <div className='bg-white  my-5 grid w-full auto-rows-auto grid-cols-1 justify-center gap-4 '>
+        <div className='my-2 grid w-full auto-rows-auto grid-cols-1 justify-center gap-4 '>
           <HistorialTable></HistorialTable>
 
         </div>

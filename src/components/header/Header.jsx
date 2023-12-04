@@ -33,7 +33,7 @@ const Header = () =>{
     } */
     
     return(
-        <section className=" flex flex-row  h-screen max-h-16 bg-white justify-between rounded-md">
+        <section className=" flex flex-row py-2 h-screen max-h-16 bg-white justify-between rounded-md">
             <div className="hover:bg-slate-300 focus-visible:bg-slate-300 max-h-9 h-screen my-auto w-screen max-w-sm flex rounded-full mx-[20px] dark:bg-slate-800  dark:text-white">
                 <div className=" flex items-center justify-center ml-[20px] mr-[4px]">
                     <GoSearch size={22}/>
