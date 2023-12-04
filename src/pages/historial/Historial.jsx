@@ -3,21 +3,17 @@ import HistorialTable from "./components/HistorialTable"
 
 function Historial() {
   return (
-    <main className='h-full flex flex-col gap-2' >
+    <main className='h-full bg-red-200 flex flex-col gap-2 ' >
       <div className='my-5 border-gray-500 border-b-2 '>
         <h1 className='text-3xl uppercase'>Historial de reservas</h1>
-      </div>
-      <div className='container mx-auto'>
-        <div className='bg-slate-500 w-full py-5 lg:flex lg:flex-wrap lg:gap-4'>
-          <div>
-            Acá van los ditintos botones para la tabla
-          </div>
+      </div>      
+      <div className='container mx-auto py-auto'>     
+        <div className='bg-slate-600 flex flex-row py-8 px-auto'>
+          <p>Acá va las opciones de la tabla</p>
         </div>
-        <div className='my-2 grid w-full auto-rows-auto grid-cols-1 justify-center gap-4 '>
-          <HistorialTable></HistorialTable>
-
+        <div className='pt-7'>
+          <HistorialTable/>
         </div>
-
       </div>
       
       {/* <div className=' flex flex-col items-center justify-center container h-screen max-h-[750px] bg-white mx-auto'>

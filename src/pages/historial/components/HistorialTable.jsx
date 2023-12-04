@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FiChevronRight, FiChevronLeft ,FiChevronsRight ,FiChevronsLeft   } from "react-icons/fi";
+/* import {buttonsHistorialData} from '../constans/Index' */
 import {
   useReactTable,
   getCoreRowModel,
@@ -9,6 +10,7 @@ import {
   getSortedRowModel,
   getFilteredRowModel
 } from "@tanstack/react-table";
+import HistorialTableButtons from "./HistorialTableButtons";
 import data from "../../../../MOCK_DATA.json";
 
 function HistorialTable() {
@@ -60,14 +62,15 @@ function HistorialTable() {
   });
 
   return (
-    <section className=" flex flex-col gap-4">
+    <section className=" flex flex-col gap-4 sm:max-h-[250px] sm:min-h-[150px] md:min-h-[450px] ">
       {/* <input type="text" value={filtering} onChange={e=>setFiltering(e.target.value)} /> */}
-      <table className="container mx-auto h-screen max-h-[200px] ">
-        <thead className="bg-sky-600">
+      <div className="mx-auto w-full overflow-x-auto">
+      <table className="w-full shadow text-center ">
+        <thead className="bg-sky-600 border-b-2 border-gray-200">
           {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
+            <tr className="only:text-center only:text-sm only:font-semibold only:tracking-wide" key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <th className="p-3  pl-5 text-center uppercase " key={header.id}>
+                <th className="max-w-max  px-2  font-semibold text-lg text-white py-4" key={header.id}>
                   {flexRender(
                     header.column.columnDef.header,
                     header.getContext()
@@ -78,11 +81,11 @@ function HistorialTable() {
           ))}
         </thead>
 
-        <tbody className="bg-white text-left">
+        <tbody className="divide-y divide-slate-500 text-gray-500">
           {table.getRowModel().rows.map((row) => (
-            <tr className="border-b-2 border-gray-300" key={row.id}>
+            <tr className="bg-white text-center " key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <td className="py-4  text-center text-gray-500 whitespace-nowrap  pl-5 ">
+                <td className="whitespace-nowrap p-3 text-base text-gray-600 px-10 ">
 
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
@@ -98,47 +101,35 @@ function HistorialTable() {
         </tfoot> */}
       </table>
 
+      </div>
+
       <div className="flex flex-row gap-1 items-end justify-end">
-      <button
-        onClick={() => table.setPageIndex(0)}
-        className="px-3 py-2 bg-slate-500 "
-      >
+      <button onClick={() => table.setPageIndex(0)} className="p-2 bg-sky-600  rounded-md">
         <div className="flex items-center justify-center">
           <FiChevronsLeft size={26}/>
         </div>        
       </button>
-      {/* <button
-        onClick={() => table.setPageIndex(1)}
-        className="px-3 py-2 bg-slate-500 mx-3"
-      >
-        Segunda pagina
-      </button> */}
-      <button
-        onClick={() => table.previousPage()}
-        className="px-3 py-2 bg-slate-500"
-      >
-       <div className="flex items-center justify-center">
-        <FiChevronLeft size={26}/>
-       </div>
-      </button>
-      <button
-        onClick={() => table.nextPage()}
-        className="px-3 py-2 bg-slate-500 "
-      >
+      
+       <button onClick={() => table.previousPage()}className="p-2 bg-sky-600  rounded-md">
         <div className="flex items-center justify-center">
-        <FiChevronRight size={26}/>
+          <FiChevronLeft size={26}/>
         </div>
-        
       </button>
-      <button
-        onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-        className="px-3 py-2 bg-slate-500 "
-      >
+
+      <button onClick={() => table.nextPage()} className="p-2 bg-sky-600 rounded-md ">
         <div className="flex items-center justify-center">
-        <FiChevronsRight size={26}/>
-        </div>
-        
+          <FiChevronRight size={26}/>
+        </div>        
       </button>
+
+      <button onClick={() => table.setPageIndex(table.getPageCount() - 1)} className="p-2 bg-sky-600  rounded-md " >
+        <div className="flex items-center justify-center">
+          <FiChevronsRight size={26}/>
+        </div>        
+      </button>
+
+      
+
       </div>
     </section>
   );
