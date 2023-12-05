@@ -13,7 +13,7 @@ import {
 import HistorialTableButtons from "./HistorialTableButtons";
 import data from "../../../../MOCK_DATA.json";
 
-function HistorialTable() {
+function   HistorialTable() {
   const columns = [
     //ACA COLOCAS EN HEADER: EL ENCABEZADO COMO QUIERES QUE SE MUESTRE Y DENTRO DEL accessorKey: El dato del cual quieres que lea
     {
@@ -94,11 +94,7 @@ function HistorialTable() {
           ))}
         </tbody>
 
-       {/*  <tfoot>
-          <tr>
-            <td>Deporte</td>
-          </tr>
-        </tfoot> */}
+       
       </table>
 
       </div>
