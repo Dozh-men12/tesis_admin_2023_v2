@@ -63,7 +63,7 @@ function Login() {
     }
 
     return (
-        <div className="flex justify-center items-center h-screen font-[Lato]  bg-slate-800">
+        <div className="flex justify-center items-center h-screen font-[Lato]   bg-slate-800">
             <div className="grid md:grid-cols-2 md:justify-center w-[1190px] h-[611px] rounded-xl md:shadow-[0_0_24px_0px_rgba(0,0,0,0.3)] bg-white">
                 <div className='flex flex-col font-bold'>
                     <div className='flex justify-center items-center mt-10'>
@@ -75,7 +75,7 @@ function Login() {
                             <input type="email" placeholder='admin@tecsup.edu.pe' className='border border-gray-dark rounded-md  w-[452px] h-[34px] px-3' />
                         </div>
                         <div className='flex flex-col gap-1'>
-                            <p className='font-semibold'>Ingrese su contraseña</p>
+                            <p>Ingrese su contraseña</p>
                             {/* <span></span> */}
                             <div className='border border-gray-dark rounded-md  w-[452px] h-[34px] px-3 flex'>
                                 <input type={password ? "text" : "password"} placeholder='Ingrese su contraseña' className='w-[400px] h-[30px] mt-[1px]  shadow-none bg-none border-none focus:outline-none focus:ring-0' required />
@@ -86,7 +86,7 @@ function Login() {
                         </div>                      
                         <div>                            
                                 <Link to='/inicio'>
-                                    <button className='px-[170px] py-2 text-center bg-[#18A8D6] flex flex-row justify-center items-center rounded-md font-bold'>
+                                    <button className='px-[170px] py-2 text-center bg-[#18A8D6] flex flex-row justify-center items-center rounded-md'>
                                         INICAR SESION
                                     </button>
                                 </Link>                                     

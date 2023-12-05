@@ -9,7 +9,7 @@ export default {
         times: ['"Times New Roman"'],
         dm:['DM Sans', 'sans-serif'],
         'primary': ['Quicksand', 'sans-serif'],
-        'second' : ['Nunito','sans-serif'],
+        
       },
       colors: {
         'blue-dark': '#384c97',
