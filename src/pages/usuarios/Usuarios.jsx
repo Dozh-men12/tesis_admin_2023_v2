@@ -8,17 +8,12 @@ function Usuarios() {
         <h1 className='text-3xl uppercase'>Usuarios registrados</h1>
       </div>
       <div className='container mx-auto'>
-        <div className='bg-slate-500 w-full py-5 lg:flex lg:flex-wrap lg:gap-4'>
-          <div>
-            Filtro
-          </div>
+        <div className='bg-slate-500 w-full py-5 lg:flex lg:flex-wrap lg:gap-4'>          
+            <p>Filtro</p>          
+        </div>        
+        <div className='pt-7'>
+          <UsuariosTable/>
         </div>
-        <div className='bg-white my-5 grid w-full auto-rows-auto grid-cols-1 justify-center'>
-          <div className='pt-7'>
-            <UsuariosTable/>
-          </div>
-        </div>
-
       </div>
       
       
