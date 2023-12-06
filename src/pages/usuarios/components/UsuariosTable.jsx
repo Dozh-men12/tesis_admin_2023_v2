@@ -1,7 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react'
 import { FiChevronRight, FiChevronLeft ,FiChevronsRight ,FiChevronsLeft   } from "react-icons/fi";
-/* import {buttonsHistorialData} from '../constans/Index' */
+
 import {
   useReactTable,
   getCoreRowModel,
@@ -11,13 +10,10 @@ import {
   getFilteredRowModel
 } from "@tanstack/react-table";
 
-import data from "../../../../MOCK_DATA.json";
-import { columns } from "../constans/Index";
+import data from "../../../../MOCK_DATA_USERS.json";
+import { columns } from "../constans/Index"
 
-function   HistorialTable() {
-  
-
-  const [filtering, setFiltering] =useState("")
+function UsuariosTable() {
 
   const table = useReactTable({
     data,
@@ -26,17 +22,12 @@ function   HistorialTable() {
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
-    state:{
-      globalFilter: filtering
-    },
-    onGlobalFilterChange: setFiltering,
-    
+
   });
 
-  
 
   return (
-    <section className=" flex flex-col gap-4 sm:max-h-[250px] sm:min-h-[150px] md:min-h-[450px] ">
+    <section className=" flex flex-col gap-4 sm:max-h-[250px] sm:min-h-[150px] md:min-h-[550px] ">
       {/* <input type="text" value={filtering} onChange={e=>setFiltering(e.target.value)} /> */}
       <div className="mx-auto w-full overflow-x-auto">
         <table className="w-full shadow text-center ">
@@ -44,7 +35,7 @@ function   HistorialTable() {
             {table.getHeaderGroups().map((headerGroup) => (
               <tr className="only:text-center only:text-sm only:font-semibold only:tracking-wide" key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
-                  <th className="max-w-max  px-2  font-semibold text-lg text-white py-4" key={header.id}>
+                  <th className="max-w-max px-2  font-semibold text-lg text-white py-4" key={header.id}>
                     {flexRender(
                       header.column.columnDef.header,
                       header.getContext()
@@ -94,8 +85,9 @@ function   HistorialTable() {
           </div>        
         </button>    
       </div>
+      
     </section>
-  );
+  )
 }
 
-export default HistorialTable;
+export default UsuariosTable

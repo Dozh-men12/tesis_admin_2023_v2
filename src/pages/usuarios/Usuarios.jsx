@@ -1,4 +1,5 @@
 import React from 'react'
+import UsuariosTable from './components/UsuariosTable'
 
 function Usuarios() {
   return (
@@ -12,9 +13,10 @@ function Usuarios() {
             Filtro
           </div>
         </div>
-        <div className='bg-white  my-5 grid w-full auto-rows-auto grid-cols-1 justify-center gap-4 '>
-          TABLA
-
+        <div className='bg-white my-5 grid w-full auto-rows-auto grid-cols-1 justify-center'>
+          <div className='pt-7'>
+            <UsuariosTable/>
+          </div>
         </div>
 
       </div>
