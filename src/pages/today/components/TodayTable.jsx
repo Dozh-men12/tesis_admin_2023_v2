@@ -25,7 +25,7 @@ function TodayTable() {
   const { data,loading } = useFetch('http://localhost:9000/api/reservas-disponibles')  
 
   const table = useReactTable({
-    data,
+    data: data || [],
     columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
@@ -65,7 +65,6 @@ function TodayTable() {
               <tr className="bg-white text-center " key={row.id}>
                 {row.getVisibleCells().map((cell) => (
                   <td className="whitespace-nowrap p-3 text-base text-gray-600 px-10 ">
-
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </td>
                 ))}
