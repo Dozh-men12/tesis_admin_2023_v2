@@ -1,18 +1,12 @@
 import React from 'react'
 
-import { useFetch } from './constans/useFetch'
-import { dotSpinner } from 'ldrs'
 
-dotSpinner.register()
-
-// Default values shown
-
-
+import UsuariosTable from './components/UsuariosTable'
 
 
 function Usuarios() {
 
-  const { data,loading } = useFetch('http://localhost:9000/api/usuarios')  
+ 
 
 
   return (
@@ -24,24 +18,9 @@ function Usuarios() {
         <div className='bg-slate-500 w-full py-5 lg:flex lg:flex-wrap lg:gap-4'>          
             <p>Filtro</p>          
         </div>        
-        <div className='pt-7'>
-        {/* import 'ldrs/dotSpinner' */}
-    
- 
+        <div className='pt-7'>   
 
-          <ul>
-            {loading && <l-dot-spinner
-  size="40"
-  speed="0.9" 
-  color="black" 
->Cargando</l-dot-spinner> }
-            {data?.map((user)=>(
-              <li key={user.id}>
-              {user.nombres + ' ' + user.apellidos}
-              </li>
-            ))}
-          </ul>
-         {/*  <UsuariosTable/> */}
+          <UsuariosTable/>
         </div>
       </div>
       

@@ -1,6 +1,9 @@
 import React from 'react'
-import { columns } from '../constans/Index'
 import { FiChevronRight, FiChevronLeft ,FiChevronsRight ,FiChevronsLeft   } from "react-icons/fi";
+import { dotSpinner } from 'ldrs'
+
+dotSpinner.register()
+
 
 import {
   useReactTable,
@@ -10,10 +13,16 @@ import {
   getSortedRowModel,
   getFilteredRowModel
 } from "@tanstack/react-table";
-import data from "../../../../MOCK_DATA.json";
+
+import { useFetch } from '../../../constans/useFetch';
+import { columns } from '../constans/Index'
+
+
 
 
 function TodayTable() {
+
+  const { data,loading } = useFetch('http://localhost:9000/api/reservas-disponibles')  
 
   const table = useReactTable({
     data,
@@ -25,6 +34,13 @@ function TodayTable() {
     
   });
 
+  if (loading) {
+    return <l-dot-spinner
+    size="40"
+    speed="0.9" 
+    color="black" 
+  >Cargando</l-dot-spinner>;
+  }
   return (
     <section className=" flex flex-col gap-4 sm:max-h-[250px] sm:min-h-[150px] md:min-h-[450px] ">
       {/* <input type="text" value={filtering} onChange={e=>setFiltering(e.target.value)} /> */}

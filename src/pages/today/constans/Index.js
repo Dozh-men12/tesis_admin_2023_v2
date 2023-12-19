@@ -1,26 +1,18 @@
 export const columns = [
   {
-    header: "Id",
-    accessorKey: "id",
+    header: "Estudiante",
+    accessorKey: "estudiante",
   },
   {
-    header: "Deporte",
-    accessorKey: "Deporte",
+    header: "Campo",
+    accessorKey: "campo",
   },
   {
-    header: "Fecha",
-    accessorKey: "Fecha",
+    header: "Dia",
+    accessorKey: "dia",
   },
   {
     header: "Hora",
-    accessorKey: "Hora",
-  },
-  {
-    header: "Usuario",
-    accessorKey: "Usuario",
-  },
-  {
-    header: "Estado",
-    accessorKey: "Estado",
+    accessorKey: "hora",
   },
 ];

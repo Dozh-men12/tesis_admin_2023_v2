@@ -1,5 +1,9 @@
 import React from 'react'
 import { FiChevronRight, FiChevronLeft ,FiChevronsRight ,FiChevronsLeft   } from "react-icons/fi";
+import { dotSpinner } from 'ldrs'
+
+dotSpinner.register()
+
 
 import {
   useReactTable,
@@ -10,21 +14,35 @@ import {
   getFilteredRowModel
 } from "@tanstack/react-table";
 
-import data from "../../../../MOCK_DATA_USERS.json";
+import { useFetch } from '../../../constans/useFetch';
+/* import data from "../../../../MOCK_DATA_USERS.json"; */
 import { columns } from "../constans/Index"
 
 function UsuariosTable() {
 
+  const { data,loading } = useFetch('http://localhost:9000/api/usuarios')  
+
   const table = useReactTable({
-    data,
+    data: data || [],
     columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
-
   });
 
+  if (loading) {
+    return <l-dot-spinner
+    size="40"
+    speed="0.9" 
+    color="black" 
+  >Cargando</l-dot-spinner>;
+  }
+
+  /* if (error) {
+    return <p>Error al cargar los datos: {error.message}</p>;
+  }
+ */
 
   return (
     <section className=" flex flex-col gap-4 sm:max-h-[250px] sm:min-h-[150px] md:min-h-[550px] ">
