@@ -1,7 +1,14 @@
 import React from 'react'
-import UsuariosTable from './components/UsuariosTable'
+
+import { useFetch } from './constans/useFetch'
+
+
 
 function Usuarios() {
+
+  const { data } = useFetch('http://localhost:9000/api/usuarios')  
+
+
   return (
     <main className='h-full flex flex-col gap-2' >
       <div className='my-5 border-gray-500 border-b-2 '>
@@ -12,7 +19,15 @@ function Usuarios() {
             <p>Filtro</p>          
         </div>        
         <div className='pt-7'>
-          <UsuariosTable/>
+
+          <ul>
+            {data?.map((user)=>(
+              <li key={user.id}>
+              {user.nombres + ' ' + user.apellidos}
+              </li>
+            ))}
+          </ul>
+         {/*  <UsuariosTable/> */}
         </div>
       </div>
       
